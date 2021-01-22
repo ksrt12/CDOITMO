@@ -2,13 +2,13 @@ package com.bukhmastov.cdoitmo.network.model;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.network.handlers.ResponseHandler;
 import com.bukhmastov.cdoitmo.network.handlers.joiner.ResponseHandlerJoiner;
 
 import java.util.Map;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public abstract class Room101 extends DeIfmo {
 

@@ -5,6 +5,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
@@ -25,8 +32,6 @@ import com.bukhmastov.cdoitmo.firebase.FirebasePerformanceProvider;
 import com.bukhmastov.cdoitmo.fragment.ERegisterFragment;
 import com.bukhmastov.cdoitmo.fragment.HelpFragment;
 import com.bukhmastov.cdoitmo.fragment.HomeScreenInteractionFragment;
-import com.bukhmastov.cdoitmo.fragment.IsuGroupInfoFragment;
-import com.bukhmastov.cdoitmo.fragment.IsuScholarshipPaidFragment;
 import com.bukhmastov.cdoitmo.fragment.ProtocolFragment;
 import com.bukhmastov.cdoitmo.fragment.RatingFragment;
 import com.bukhmastov.cdoitmo.fragment.Room101Fragment;
@@ -53,13 +58,6 @@ import com.bukhmastov.cdoitmo.util.singleton.Migration;
 import com.google.android.material.navigation.NavigationView;
 
 import javax.inject.Inject;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import dagger.Lazy;
 

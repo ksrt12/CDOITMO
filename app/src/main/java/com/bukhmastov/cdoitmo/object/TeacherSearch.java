@@ -1,11 +1,11 @@
 package com.bukhmastov.cdoitmo.object;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-
 import androidx.annotation.IntDef;
 
 import com.bukhmastov.cdoitmo.model.schedule.teachers.STeachers;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 public interface TeacherSearch {
 

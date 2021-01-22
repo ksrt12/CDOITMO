@@ -1,9 +1,9 @@
 package com.bukhmastov.cdoitmo.fragment.presenter;
 
+import androidx.annotation.StringDef;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import androidx.annotation.StringDef;
 
 public interface LinkAccountFragmentPresenter extends ConnectedFragmentPresenter {
 

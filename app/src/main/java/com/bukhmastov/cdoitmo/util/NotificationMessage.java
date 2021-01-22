@@ -2,9 +2,10 @@ package com.bukhmastov.cdoitmo.util;
 
 import android.app.Activity;
 import android.content.Context;
+import android.view.View;
+
 import androidx.annotation.IdRes;
 import androidx.annotation.StringRes;
-import android.view.View;
 
 public interface NotificationMessage {
 

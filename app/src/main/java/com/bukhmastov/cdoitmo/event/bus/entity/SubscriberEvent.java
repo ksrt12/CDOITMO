@@ -13,8 +13,8 @@ public class SubscriberEvent {
 
     private final Object target;
     private final Method method;
-    private Subject<Object> subject;
-    private Disposable disposable;
+    private final Subject<Object> subject;
+    private final Disposable disposable;
     private boolean valid = true;
     private final int hashCode;
 

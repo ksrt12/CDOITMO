@@ -4,9 +4,10 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 
+import androidx.fragment.app.Fragment;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
-import com.bukhmastov.cdoitmo.view.dialog.ThemeDialog;
 import com.bukhmastov.cdoitmo.event.events.OpenIntentEvent;
 import com.bukhmastov.cdoitmo.object.preference.Preference;
 import com.bukhmastov.cdoitmo.object.preference.PreferenceBasic;
@@ -15,12 +16,11 @@ import com.bukhmastov.cdoitmo.object.preference.PreferenceList;
 import com.bukhmastov.cdoitmo.object.preference.PreferenceSwitch;
 import com.bukhmastov.cdoitmo.provider.InjectProvider;
 import com.bukhmastov.cdoitmo.util.NotificationMessage;
+import com.bukhmastov.cdoitmo.view.dialog.ThemeDialog;
 
 import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
-
-import androidx.fragment.app.Fragment;
 
 public class SettingsGeneralFragment extends SettingsTemplatePreferencesFragment {
 
@@ -83,7 +83,7 @@ public class SettingsGeneralFragment extends SettingsTemplatePreferencesFragment
                     final int week = Integer.parseInt(value);
                     final long ts = injectProvider.getTime().getCalendar().getTimeInMillis();
                     if (week > 0) {
-                        value = String.valueOf(week) + "#" + String.valueOf(ts);
+                        value = week + "#" + ts;
                     }
                 } catch (Exception e) {
                     value = "";

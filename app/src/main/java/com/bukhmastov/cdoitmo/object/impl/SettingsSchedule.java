@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
 import android.widget.RadioGroup;
 
+import androidx.annotation.LayoutRes;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
 import com.bukhmastov.cdoitmo.adapter.array.TeacherPickerAdapter;
@@ -24,8 +26,6 @@ import com.bukhmastov.cdoitmo.object.schedule.Schedule;
 import com.bukhmastov.cdoitmo.util.singleton.StringUtils;
 
 import java.util.ArrayList;
-
-import androidx.annotation.LayoutRes;
 
 public abstract class SettingsSchedule<T extends ScheduleJsonEntity> extends SettingsScheduleBase implements Schedule.Handler<T> {
 

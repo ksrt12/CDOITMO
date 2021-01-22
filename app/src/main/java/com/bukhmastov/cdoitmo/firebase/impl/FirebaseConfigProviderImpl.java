@@ -37,11 +37,11 @@ public class FirebaseConfigProviderImpl implements FirebaseConfigProvider {
     private FirebaseRemoteConfig getFirebaseRemoteConfig() {
         FirebaseRemoteConfig firebaseRemoteConfig = FirebaseRemoteConfig.getInstance();
         if (DEBUG) {
-            firebaseRemoteConfig.setConfigSettings(new FirebaseRemoteConfigSettings.Builder()
-                    .setDeveloperModeEnabled(true)
-                    .build());
+            FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()
+                    .setMinimumFetchIntervalInSeconds(3600)
+                    .build();
         }
-        firebaseRemoteConfig.setDefaults(R.xml.remote_config_defaults);
+        firebaseRemoteConfig.setDefaultsAsync(R.xml.remote_config_defaults);
         return firebaseRemoteConfig;
     }
 

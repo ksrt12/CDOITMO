@@ -13,7 +13,7 @@ public class SLessons extends ScheduleJsonEntity {
      * Общий тип расписания: "lessons", "exams", "attestations"
      */
     @JsonProperty("schedule_type")
-    private String scheduleType;
+    private final String scheduleType;
 
     /**
      * Строка, по которой идет поиск: "personal", "K3320", "123456", "336", "Зинчик" (Используется для повторного поиска и кэширования)

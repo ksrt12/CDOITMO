@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
+import androidx.annotation.NonNull;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.MainActivity;
@@ -40,7 +42,6 @@ import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 
-import androidx.annotation.NonNull;
 import dagger.Lazy;
 
 public class ProtocolTrackerServiceImpl implements ProtocolTrackerService {
@@ -254,7 +255,7 @@ public class ProtocolTrackerServiceImpl implements ProtocolTrackerService {
                     size += change.getValue().size();
                 }
                 if (size > 1) {
-                    addNotification(context, context.getString(R.string.protocol_changes), String.valueOf(size) + " " + getActionsLabel(context, size), timestamp, 0, true);
+                    addNotification(context, context.getString(R.string.protocol_changes), size + " " + getActionsLabel(context, size), timestamp, 0, true);
                 }
                 for (Map.Entry<String, ArrayList<PChange>> change : changes.entrySet()) {
                     final String subject = change.getKey();

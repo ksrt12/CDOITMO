@@ -1,16 +1,16 @@
 package com.bukhmastov.cdoitmo.util.impl;
 
 import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import dagger.Lazy;
 
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.firebase.FirebasePerformanceProvider;
 import com.bukhmastov.cdoitmo.util.Log;
+import com.bukhmastov.cdoitmo.util.Storage;
 import com.bukhmastov.cdoitmo.util.StorageLocalCache;
 import com.bukhmastov.cdoitmo.util.StoragePref;
-import com.bukhmastov.cdoitmo.util.Storage;
 
 import java.io.File;
 import java.io.FileReader;
@@ -20,6 +20,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import javax.inject.Inject;
+
+import dagger.Lazy;
 
 public class StorageImpl implements Storage {
 

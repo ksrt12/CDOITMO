@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -204,8 +205,8 @@
                         android:layout_width="@dimen/dp24"
                         android:layout_height="@dimen/dp24"
                         android:src="@drawable/ic_colorize"
-                        android:tint="?android:attr/textColorPrimary"
-                        android:padding="@dimen/item_padding_quarter"/>
+                        android:padding="@dimen/item_padding_quarter"
+                        app:tint="?android:attr/textColorPrimary" />
 
                     <TextView
                         android:id="@+id/background_color_picker_hint"
@@ -275,8 +276,8 @@
                         android:layout_width="@dimen/dp24"
                         android:layout_height="@dimen/dp24"
                         android:src="@drawable/ic_colorize"
-                        android:tint="?android:attr/textColorPrimary"
-                        android:padding="@dimen/item_padding_quarter"/>
+                        android:padding="@dimen/item_padding_quarter"
+                        app:tint="?android:attr/textColorPrimary" />
 
                     <TextView
                         android:id="@+id/text_color_picker_hint"

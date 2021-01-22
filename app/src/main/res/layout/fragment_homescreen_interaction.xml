@@ -54,7 +54,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_widgets"
-                                android:tint="?attr/colorIcXml"/>
+                                app:tint="?attr/colorIcXml" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/ic_extension"
-                                android:tint="?attr/colorIcXml" />
+                                app:tint="?attr/colorIcXml" />
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -147,7 +147,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_shortcut"
-                            android:tint="?attr/colorIcXml" />
+                            app:tint="?attr/colorIcXml" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -188,7 +188,7 @@
                     android:layout_centerVertical="true"
                     android:layout_alignParentStart="true"
                     android:src="@drawable/ic_shortcut"
-                    android:tint="?attr/colorIcXml" />
+                    app:tint="?attr/colorIcXml" />
 
                 <TextView
                     android:id="@+id/header_text"

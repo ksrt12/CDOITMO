@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -31,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_16dp"
             android:src="@drawable/ic_access_time"
-            android:tint="?android:attr/textColorPrimary"/>
+            app:tint="?android:attr/textColorPrimary" />
 
         <TextView
             android:id="@+id/lesson_time_end"
@@ -82,7 +83,7 @@
                 android:layout_height="@dimen/schedule_data_icon"
                 android:padding="2dp"
                 android:src="@drawable/ic_visibility_off"
-                android:tint="?android:attr/textColorPrimary" />
+                app:tint="?android:attr/textColorPrimary" />
 
             <ImageView
                 android:id="@+id/lesson_synthetic_icon"
@@ -90,15 +91,15 @@
                 android:layout_height="@dimen/schedule_data_icon"
                 android:padding="2dp"
                 android:src="@drawable/ic_synthetic"
-                android:tint="?android:attr/textColorPrimary" />
+                app:tint="?android:attr/textColorPrimary" />
 
             <ImageView
                 android:id="@+id/lesson_touch_icon"
                 android:layout_width="@dimen/schedule_data_icon"
                 android:layout_height="@dimen/schedule_data_icon"
                 android:src="@drawable/ic_more_vert"
-                android:tint="?android:attr/textColorPrimary"
-                android:background="?android:attr/selectableItemBackgroundBorderless" />
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:tint="?android:attr/textColorPrimary" />
 
         </LinearLayout>
 

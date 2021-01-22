@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -18,7 +19,7 @@
             android:layout_gravity="center"
             android:padding="@dimen/university_person_card_contact_info_padding"
             android:src="@drawable/ic_email"
-            android:tint="?attr/colorUniversityIcon"/>
+            app:tint="?attr/colorUniversityIcon" />
 
     </FrameLayout>
 

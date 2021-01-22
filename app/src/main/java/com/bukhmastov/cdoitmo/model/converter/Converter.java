@@ -9,7 +9,7 @@ import com.bukhmastov.cdoitmo.model.JsonEntity;
 
 public abstract class Converter<IN extends JsonEntity, OUT extends JsonEntity> extends ConverterBase {
 
-    private IN entity;
+    private final IN entity;
 
     public Converter(@NonNull IN entity) {
         super();

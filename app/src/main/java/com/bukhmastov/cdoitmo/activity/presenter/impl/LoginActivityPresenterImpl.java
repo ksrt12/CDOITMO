@@ -14,6 +14,10 @@ import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
@@ -65,9 +69,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
 import dagger.Lazy;
 
 import static com.bukhmastov.cdoitmo.util.Thread.AL;
@@ -850,8 +851,8 @@ public class LoginActivityPresenterImpl implements LoginActivityPresenter {
 
     private class SetupInformationMeta {
 
-        private Runnable onDone;
-        private String login;
+        private final Runnable onDone;
+        private final String login;
         private boolean isDeIfmoDone;
         private boolean isIsuUserDone;
         private boolean isIsuWeekDone;

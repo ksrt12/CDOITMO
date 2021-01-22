@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.presenter.MainActivityPresenter;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.util.Theme;
 
 import javax.inject.Inject;
-
-import androidx.drawerlayout.widget.DrawerLayout;
 
 public class MainActivity extends ConnectedActivity {
 

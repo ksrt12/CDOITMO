@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.builder.Room101ReviewBuilder;
@@ -39,8 +41,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.HashMap;
 
 import javax.inject.Inject;
-
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import static com.bukhmastov.cdoitmo.util.Thread.R101;
 
@@ -416,11 +416,7 @@ public class Room101FragmentPresenterImpl extends ConnectedFragmentWithDataPrese
                 return;
             }
             setData(cache);
-            if (cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis()) {
-                load(true, cache);
-            } else {
-                load(false, cache);
-            }
+            load(cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis(), cache);
         }, throwable -> {
             loadFailed();
         });

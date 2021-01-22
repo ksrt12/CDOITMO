@@ -2,10 +2,10 @@ package com.bukhmastov.cdoitmo.util;
 
 import android.app.Activity;
 import android.content.Context;
-import com.google.android.material.navigation.NavigationView;
 import android.view.Menu;
 
 import com.bukhmastov.cdoitmo.firebase.FirebaseConfigProvider;
+import com.google.android.material.navigation.NavigationView;
 
 public interface NavigationMenu {
 

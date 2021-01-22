@@ -1,12 +1,13 @@
 package com.bukhmastov.cdoitmo.adapter.rva;
 
 import androidx.recyclerview.widget.RecyclerView;
-import dagger.Lazy;
 
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.util.Log;
 
 import javax.inject.Inject;
+
+import dagger.Lazy;
 
 public abstract class RVABase extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 

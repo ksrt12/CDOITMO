@@ -5,6 +5,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.model.group.GGroup;
 import com.bukhmastov.cdoitmo.model.group.GList;
@@ -16,9 +19,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
 
 public class GroupRVA extends RVA<GPerson> {
 
@@ -112,7 +112,7 @@ public class GroupRVA extends RVA<GPerson> {
                 boolean isGroupHasPersons = CollectionUtils.isNotEmpty(gGroup.getPersons());
                 int personCount = isGroupHasPersons ? gGroup.getPersons().size() : 0;
                 String group = context.getString(R.string.group) + " " + gGroup.getGroup();
-                String personCountString = String.valueOf(personCount) + " ";
+                String personCountString = personCount + " ";
                 String appendix;
                 switch (personCount % 100) {
                     case 10: case 11: case 12: case 13: case 14: appendix = context.getString(R.string.student3); break;

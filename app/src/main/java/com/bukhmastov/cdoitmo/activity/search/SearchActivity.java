@@ -13,6 +13,11 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.StringDef;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.BaseActivity;
 import com.bukhmastov.cdoitmo.adapter.rva.SearchSuggestionsRVA;
@@ -38,11 +43,6 @@ import java.util.List;
 import java.util.Locale;
 
 import javax.inject.Inject;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.StringDef;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import static com.bukhmastov.cdoitmo.util.Thread.AS;
 

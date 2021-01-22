@@ -1,10 +1,11 @@
 package com.bukhmastov.cdoitmo.adapter.rva;
 
 import android.content.Context;
-import androidx.annotation.LayoutRes;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.LayoutRes;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
@@ -63,7 +64,7 @@ public class ScheduleExamsRVA extends RVA<RVAExams> {
     private final String query;
     private final Collection<SSubject> events;
     private final int mode; // 0 - exam, 1 - credit
-    private String type;
+    private final String type;
 
     public ScheduleExamsRVA(SExams data, Collection<SSubject> events, int mode) {
         super();
@@ -269,7 +270,7 @@ public class ScheduleExamsRVA extends RVA<RVAExams> {
             String dataSource = StringUtils.isNotBlank(item.data.getSecond()) ? item.data.getSecond() : "";
             ((TextView) container.findViewById(R.id.update_time)).setText(updateTime);
             ((TextView) container.findViewById(R.id.data_source)).setText(dataSource);
-            ((TextView) container.findViewById(R.id.data_source)).setVisibility(StringUtils.isEmpty(dataSource) ? View.GONE : View.VISIBLE);
+            container.findViewById(R.id.data_source).setVisibility(StringUtils.isEmpty(dataSource) ? View.GONE : View.VISIBLE);
         } catch (Exception e) {
             log.get().exception(e);
         }

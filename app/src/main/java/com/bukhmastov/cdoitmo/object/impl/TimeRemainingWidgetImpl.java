@@ -55,7 +55,7 @@ public class TimeRemainingWidgetImpl implements TimeRemainingWidget {
         private final Delegate delegate;
         private final SLessons schedule;
         private final long delay = 1000;
-        private List<SLesson> lessons;
+        private final List<SLesson> lessons;
         private boolean running;
         private boolean firstInit;
         private int week = -1;
@@ -181,11 +181,11 @@ public class TimeRemainingWidgetImpl implements TimeRemainingWidget {
                 response = StringUtils.ldgZero(minutes) + ":" + response;
             } else {
                 if (minutes > 0) {
-                    response = String.valueOf(minutes) + ":" + response;
+                    response = minutes + ":" + response;
                 }
             }
             if (hours > 0) {
-                response = String.valueOf(hours) + ":" + response;
+                response = hours + ":" + response;
             }
             return response;
         }

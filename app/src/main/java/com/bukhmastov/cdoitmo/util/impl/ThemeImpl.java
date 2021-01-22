@@ -7,11 +7,11 @@ import android.os.Build;
 import android.view.View;
 
 import com.bukhmastov.cdoitmo.R;
-import com.bukhmastov.cdoitmo.view.dialog.ThemeDialog;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.util.StoragePref;
 import com.bukhmastov.cdoitmo.util.Theme;
 import com.bukhmastov.cdoitmo.util.Time;
+import com.bukhmastov.cdoitmo.view.dialog.ThemeDialog;
 
 import javax.inject.Inject;
 

@@ -24,7 +24,7 @@ public class FirebasePerformanceProviderImpl implements FirebasePerformanceProvi
     private boolean enabled = false;
     private FirebasePerformance firebasePerformance = null;
     private String uuid = null;
-    private Map<String, com.google.firebase.perf.metrics.Trace> traceMap = new HashMap<>();
+    private final Map<String, com.google.firebase.perf.metrics.Trace> traceMap = new HashMap<>();
 
     @Inject
     Log log;

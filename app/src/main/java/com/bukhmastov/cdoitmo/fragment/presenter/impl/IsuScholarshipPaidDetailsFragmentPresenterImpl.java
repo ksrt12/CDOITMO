@@ -6,6 +6,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
@@ -35,10 +39,6 @@ import com.bukhmastov.cdoitmo.util.singleton.NumberUtils;
 import com.bukhmastov.cdoitmo.util.singleton.StringUtils;
 
 import javax.inject.Inject;
-
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import static com.bukhmastov.cdoitmo.util.Thread.ISPD;
 
@@ -155,11 +155,7 @@ public class IsuScholarshipPaidDetailsFragmentPresenterImpl extends ConnectedFra
                 return;
             }
             SSDetailedList data = getData();
-            if (data == null || data.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis()) {
-                load(true);
-            } else {
-                load(false);
-            }
+            load(data == null || data.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis());
         });
     }
 

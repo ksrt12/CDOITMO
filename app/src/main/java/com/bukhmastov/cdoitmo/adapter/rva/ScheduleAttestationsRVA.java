@@ -1,17 +1,17 @@
 package com.bukhmastov.cdoitmo.adapter.rva;
 
 import android.content.Context;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.model.rva.RVAAttestations;
 import com.bukhmastov.cdoitmo.model.rva.RVADualValue;
-import com.bukhmastov.cdoitmo.model.rva.RVASingleValue;
 import com.bukhmastov.cdoitmo.model.schedule.ScheduleJsonEntity;
 import com.bukhmastov.cdoitmo.model.schedule.attestations.SAttestation;
 import com.bukhmastov.cdoitmo.model.schedule.attestations.SAttestations;
@@ -129,7 +129,7 @@ public class ScheduleAttestationsRVA extends RVA<RVAAttestations> {
             String dataSource = StringUtils.isNotBlank(item.data.getSecond()) ? item.data.getSecond() : "";
             ((TextView) container.findViewById(R.id.update_time)).setText(updateTime);
             ((TextView) container.findViewById(R.id.data_source)).setText(dataSource);
-            ((TextView) container.findViewById(R.id.data_source)).setVisibility(StringUtils.isEmpty(dataSource) ? View.GONE : View.VISIBLE);
+            container.findViewById(R.id.data_source).setVisibility(StringUtils.isEmpty(dataSource) ? View.GONE : View.VISIBLE);
         } catch (Exception e) {
             log.get().exception(e);
         }

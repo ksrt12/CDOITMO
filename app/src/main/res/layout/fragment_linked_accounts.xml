@@ -23,9 +23,9 @@
                 android:layout_gravity="center_vertical"
                 android:layout_margin="@dimen/item_padding"
                 android:contentDescription="@string/cdo"
-                android:tint="?attr/colorDeIfmo"
                 android:tintMode="src_atop"
-                android:src="@drawable/cdo" />
+                android:src="@drawable/cdo"
+                app:tint="?attr/colorDeIfmo" />
 
             <View
                 android:layout_width="@dimen/separator"
@@ -113,11 +113,11 @@
                     android:layout_margin="@dimen/item_padding"
                     android:contentDescription="@string/isu_ifmo"
                     android:src="@drawable/isu"
-                    android:tint="?attr/colorImageMultiply"
                     android:tintMode="multiply"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="?attr/colorImageMultiply" />
 
                 <View
                     android:id="@+id/account_isu_separator"

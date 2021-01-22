@@ -1,5 +1,8 @@
 package com.bukhmastov.cdoitmo.model;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -11,12 +14,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 public abstract class JsonEntity implements Entity {
 
-    private static HashMap<String, HashMap<String, EntityMetaData>> fieldsMap = new HashMap<>();
+    private static final HashMap<String, HashMap<String, EntityMetaData>> fieldsMap = new HashMap<>();
 
     public JsonEntity() {}
 
@@ -274,19 +274,19 @@ public abstract class JsonEntity implements Entity {
             this.isArray = false;
             this.isDerivedFromEntity = JsonEntity.class.isAssignableFrom(entityType);
         }
-        private String key;
-        private int order;
-        private Class entityType;
-        private Class<?> collectionType;
-        private boolean isArray;
-        private boolean isDerivedFromEntity;
+        private final String key;
+        private final int order;
+        private final Class entityType;
+        private final Class<?> collectionType;
+        private final boolean isArray;
+        private final boolean isDerivedFromEntity;
     }
     private class EntityMetaDataValue {
         public EntityMetaDataValue(EntityMetaData metaData, Object value) {
             this.metaData = metaData;
             this.value = value;
         }
-        private EntityMetaData metaData;
-        private Object value;
+        private final EntityMetaData metaData;
+        private final Object value;
     }
 }

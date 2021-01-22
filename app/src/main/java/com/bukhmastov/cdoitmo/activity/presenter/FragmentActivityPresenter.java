@@ -1,9 +1,10 @@
 package com.bukhmastov.cdoitmo.activity.presenter;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import android.view.MenuItem;
 
 import com.bukhmastov.cdoitmo.activity.FragmentActivity;
 

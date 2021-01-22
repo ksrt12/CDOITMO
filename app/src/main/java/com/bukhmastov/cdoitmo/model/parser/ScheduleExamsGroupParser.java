@@ -130,10 +130,7 @@ public class ScheduleExamsGroupParser extends Parser<SExams> {
         if (!Objects.equals(first.getGroup(), second.getGroup())) {
             return false;
         }
-        if (!Objects.equals(first.getTeacherName(), second.getTeacherName())) {
-            return false;
-        }
-        return true;
+        return Objects.equals(first.getTeacherName(), second.getTeacherName());
     }
 
     @Override

@@ -2,6 +2,8 @@ package com.bukhmastov.cdoitmo.firebase.impl;
 
 import android.content.Context;
 
+import androidx.annotation.StringDef;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
@@ -11,16 +13,14 @@ import com.bukhmastov.cdoitmo.util.Log;
 import com.bukhmastov.cdoitmo.util.NotificationMessage;
 import com.bukhmastov.cdoitmo.util.Static;
 import com.bukhmastov.cdoitmo.util.StoragePref;
-import com.crashlytics.android.Crashlytics;
+import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 import javax.inject.Inject;
 
-import androidx.annotation.StringDef;
 import dagger.Lazy;
-import io.fabric.sdk.android.Fabric;
 
 public class FirebaseCrashlyticsProviderImpl implements FirebaseCrashlyticsProvider {
 
@@ -61,8 +61,8 @@ public class FirebaseCrashlyticsProviderImpl implements FirebaseCrashlyticsProvi
         try {
             this.enabled = enabled;
             if (this.enabled) {
-                Fabric.with(context, new Crashlytics());
-                Crashlytics.setUserIdentifier(staticUtil.get().getUUID(context));
+                FirebaseCrashlytics Crashlytics = FirebaseCrashlytics.getInstance();
+                Crashlytics.setUserId(staticUtil.get().getUUID(context));
             }
             log.i(TAG, "Firebase Crashlytics " + (this.enabled ? "enabled" : "disabled"));
         } catch (Exception e) {
@@ -76,7 +76,6 @@ public class FirebaseCrashlyticsProviderImpl implements FirebaseCrashlyticsProvi
         try {
             if (enabled) {
                 this.enabled = true;
-                Fabric.with(activity, new Crashlytics());
                 log.i(TAG, "Firebase Crashlytics enabled");
             } else {
                 notificationMessage.get().snackBar(activity, activity.getString(R.string.changes_will_take_effect_next_startup));
@@ -135,7 +134,7 @@ public class FirebaseCrashlyticsProviderImpl implements FirebaseCrashlyticsProvi
     public void exception(Throwable throwable) {
         if (!enabled) return;
         try {
-            Crashlytics.logException(throwable);
+            FirebaseCrashlytics.getInstance().recordException(throwable);
         } catch (Throwable th) {
             th.printStackTrace();
         }
@@ -145,7 +144,8 @@ public class FirebaseCrashlyticsProviderImpl implements FirebaseCrashlyticsProvi
     private void log(@LEVEL String level, String TAG, String log) {
         if (!enabled) return;
         try {
-            Crashlytics.log(level2priority(level), TAG, log);
+            FirebaseCrashlytics Crashlytics = FirebaseCrashlytics.getInstance();
+            Crashlytics.log(level2priority(level)+TAG+log);
         } catch (Throwable th) {
             th.printStackTrace();
         }

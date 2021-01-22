@@ -1,9 +1,10 @@
 package com.bukhmastov.cdoitmo.fragment.presenter;
 
 import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import android.view.View;
 
 public interface UniversityFacultiesFragmentPresenter {
 

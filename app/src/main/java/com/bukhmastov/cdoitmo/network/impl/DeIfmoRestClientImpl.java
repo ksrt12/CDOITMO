@@ -2,14 +2,17 @@ package com.bukhmastov.cdoitmo.network.impl;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.model.JsonEntity;
 import com.bukhmastov.cdoitmo.network.DeIfmoClient;
 import com.bukhmastov.cdoitmo.network.DeIfmoRestClient;
 import com.bukhmastov.cdoitmo.network.handlers.RestResponseHandler;
-import com.bukhmastov.cdoitmo.network.handlers.joiner.RestStringResponseHandlerJoiner;
 import com.bukhmastov.cdoitmo.network.handlers.joiner.RestResponseHandlerJoiner;
+import com.bukhmastov.cdoitmo.network.handlers.joiner.RestStringResponseHandlerJoiner;
 import com.bukhmastov.cdoitmo.network.model.Client;
 import com.bukhmastov.cdoitmo.util.Log;
 import com.bukhmastov.cdoitmo.util.Thread;
@@ -17,9 +20,6 @@ import com.bukhmastov.cdoitmo.util.Thread;
 import java.util.Map;
 
 import javax.inject.Inject;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class DeIfmoRestClientImpl extends DeIfmoRestClient {
 

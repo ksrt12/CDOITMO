@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -21,8 +22,8 @@
             android:layout_marginTop="@dimen/item_vertical_padding"
             android:layout_marginBottom="@dimen/item_vertical_padding"
             android:src="@mipmap/ic_shortcut_e_journal"
-            android:tint="?attr/colorImageMultiply"
-            android:tintMode="multiply" />
+            android:tintMode="multiply"
+            app:tint="?attr/colorImageMultiply" />
 
         <LinearLayout
             android:id="@+id/content"
@@ -77,8 +78,8 @@
                 android:layout_gravity="center_vertical"
                 android:layout_centerInParent="true"
                 android:src="@drawable/ic_disconnected"
-                android:tint="?attr/colorImageMultiply"
-                android:tintMode="multiply" />
+                android:tintMode="multiply"
+                app:tint="?attr/colorImageMultiply" />
 
         </RelativeLayout>
 

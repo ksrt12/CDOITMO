@@ -94,9 +94,9 @@
                             android:layout_height="@dimen/font_size_12"
                             android:layout_gravity="center_vertical"
                             android:src="@drawable/ic_visibility"
-                            android:tint="?android:attr/textColorSecondary"
                             android:layout_marginStart="@dimen/item_padding_quarter"
-                            android:layout_marginEnd="@dimen/item_padding_quarter"/>
+                            android:layout_marginEnd="@dimen/item_padding_quarter"
+                            app:tint="?android:attr/textColorSecondary" />
 
                         <TextView
                             android:id="@+id/count_view"
@@ -128,8 +128,8 @@
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
                     android:src="@drawable/background_pattern"
-                    android:tint="?attr/colorImageMultiply"
-                    android:tintMode="multiply" />
+                    android:tintMode="multiply"
+                    app:tint="?attr/colorImageMultiply" />
 
             </FrameLayout>
 

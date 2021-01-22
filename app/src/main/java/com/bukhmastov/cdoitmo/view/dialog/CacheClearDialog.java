@@ -59,7 +59,7 @@ public class CacheClearDialog extends Dialog {
             this.bytes = 0L;
         }
     }
-    private List<Entry> items = new ArrayList<>();
+    private final List<Entry> items = new ArrayList<>();
 
     public CacheClearDialog(ConnectedActivity activity) {
         super(activity);

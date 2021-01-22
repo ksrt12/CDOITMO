@@ -10,6 +10,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.adapter.rva.ERegisterSubjectsRVA;
@@ -50,11 +55,6 @@ import java.util.TreeSet;
 import java.util.regex.Pattern;
 
 import javax.inject.Inject;
-
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import static com.bukhmastov.cdoitmo.util.Thread.ER;
 
@@ -202,11 +202,7 @@ public class ERegisterFragmentPresenterImpl extends ConnectedFragmentWithDataPre
                 return;
             }
             setData(cache);
-            if (cache.getTimestamp() + refreshRate * 3600000L < time.getTimeInMillis()) {
-                load(true, cache);
-            } else {
-                load(false, cache);
-            }
+            load(cache.getTimestamp() + refreshRate * 3600000L < time.getTimeInMillis(), cache);
         });
     }
 

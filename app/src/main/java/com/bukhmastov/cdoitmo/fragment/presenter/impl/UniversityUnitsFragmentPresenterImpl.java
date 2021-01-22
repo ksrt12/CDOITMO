@@ -13,11 +13,19 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.UniversityPersonCardActivity;
 import com.bukhmastov.cdoitmo.adapter.rva.RVA;
-import com.bukhmastov.cdoitmo.view.RecyclerViewOnScrollListener;
 import com.bukhmastov.cdoitmo.adapter.rva.UniversityFacultiesRVA;
 import com.bukhmastov.cdoitmo.adapter.rva.UniversityRVA;
 import com.bukhmastov.cdoitmo.adapter.rva.UniversityUnitsRVA;
@@ -46,20 +54,13 @@ import com.bukhmastov.cdoitmo.util.Time;
 import com.bukhmastov.cdoitmo.util.singleton.CollectionUtils;
 import com.bukhmastov.cdoitmo.util.singleton.Color;
 import com.bukhmastov.cdoitmo.util.singleton.StringUtils;
+import com.bukhmastov.cdoitmo.view.RecyclerViewOnScrollListener;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.inject.Inject;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import dagger.Lazy;
 
 import static com.bukhmastov.cdoitmo.util.Thread.UU;
@@ -186,11 +187,7 @@ public class UniversityUnitsFragmentPresenterImpl implements UniversityUnitsFrag
                 return;
             }
             timestamp = cache.getTimestamp();
-            if (cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis()) {
-                load(true, cache);
-            } else {
-                load(false, cache);
-            }
+            load(cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis(), cache);
         }, throwable -> {
             loadFailed();
         });

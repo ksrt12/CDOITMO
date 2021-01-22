@@ -10,7 +10,7 @@ import java.util.Objects;
 public class SExams extends ScheduleJsonEntity {
 
     @JsonProperty("schedule_type")
-    private String scheduleType;
+    private final String scheduleType;
 
     @JsonProperty("query")
     private String query;

@@ -3,13 +3,14 @@ package com.bukhmastov.cdoitmo.adapter.rva;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
 import android.util.SparseIntArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.model.rating.top.RStudent;

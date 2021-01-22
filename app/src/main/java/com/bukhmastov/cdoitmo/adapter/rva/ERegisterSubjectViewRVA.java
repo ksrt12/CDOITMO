@@ -1,11 +1,12 @@
 package com.bukhmastov.cdoitmo.adapter.rva;
 
 import android.content.Context;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
-import android.view.View;
-import android.widget.TextView;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.model.eregister.ERMark;
@@ -293,6 +294,6 @@ public class ERegisterSubjectViewRVA extends RVA<ERSubject> {
         private String name = "";
         private String mark = "";
         private Double value = -1.0;
-        private ArrayList<ERPoint> points = new ArrayList<>();
+        private final ArrayList<ERPoint> points = new ArrayList<>();
     }
 }

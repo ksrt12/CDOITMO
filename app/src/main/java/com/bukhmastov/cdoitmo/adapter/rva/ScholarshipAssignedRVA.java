@@ -4,6 +4,9 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.model.scholarship.assigned.SSAssigned;
 import com.bukhmastov.cdoitmo.model.scholarship.assigned.SSAssignedList;
@@ -12,9 +15,6 @@ import com.bukhmastov.cdoitmo.util.singleton.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
 
 public class ScholarshipAssignedRVA extends RVA<SSAssigned> {
 

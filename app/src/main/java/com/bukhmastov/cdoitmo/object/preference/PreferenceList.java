@@ -8,6 +8,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import androidx.annotation.ArrayRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
 import com.bukhmastov.cdoitmo.provider.InjectProvider;
@@ -16,10 +20,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import androidx.annotation.ArrayRes;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-
 public class PreferenceList extends Preference {
 
     private interface OnCheckedChangeListener {
@@ -27,10 +27,12 @@ public class PreferenceList extends Preference {
     }
 
     private @StringRes int description = 0;
-    private @ArrayRes int arrayTitles;
-    private @ArrayRes int arrayValues;
+    private @ArrayRes
+    final int arrayTitles;
+    private @ArrayRes
+    final int arrayValues;
     private @ArrayRes int arrayDesc = 0;
-    private boolean changeSummary;
+    private final boolean changeSummary;
 
     public PreferenceList(String key, Object defaultValue, @StringRes int title, @StringRes int summary,
                           @StringRes int description, @ArrayRes int arrayTitles, @ArrayRes int arrayDesc,

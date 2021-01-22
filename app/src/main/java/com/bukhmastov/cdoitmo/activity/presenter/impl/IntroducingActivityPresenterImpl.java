@@ -5,14 +5,15 @@ import android.animation.ValueAnimator;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
-import androidx.annotation.DrawableRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.IntroducingActivity;
@@ -33,7 +34,7 @@ public class IntroducingActivityPresenterImpl implements IntroducingActivityPres
     private static final String colorIndicatorActive = "#FFFFFFFF";
     private static final String colorIndicatorInActive = "#88FFFFFF";
     private IntroducingActivity activity = null;
-    private ArrayList<Screen> screens = new ArrayList<>();
+    private final ArrayList<Screen> screens = new ArrayList<>();
     private int position = -1;
 
     @Inject

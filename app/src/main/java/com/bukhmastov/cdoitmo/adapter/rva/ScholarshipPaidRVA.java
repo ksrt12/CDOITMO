@@ -4,6 +4,9 @@ import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.model.scholarship.paid.SSPaid;
@@ -17,9 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
-
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
 
 public class ScholarshipPaidRVA extends RVA<SSPaid> {
 

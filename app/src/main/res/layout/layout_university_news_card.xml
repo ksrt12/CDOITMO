@@ -39,8 +39,8 @@
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
                     android:src="@drawable/background_pattern"
-                    android:tint="?attr/colorImageMultiply"
-                    android:tintMode="multiply" />
+                    android:tintMode="multiply"
+                    app:tint="?attr/colorImageMultiply" />
 
             </FrameLayout>
 
@@ -125,8 +125,8 @@
                             android:layout_gravity="center_vertical"
                             android:layout_marginEnd="@dimen/item_padding_quarter"
                             android:layout_marginStart="@dimen/item_padding_quarter"
-                            android:tint="?android:attr/textColorSecondary"
-                            android:src="@drawable/ic_visibility" />
+                            android:src="@drawable/ic_visibility"
+                            app:tint="?android:attr/textColorSecondary" />
 
                         <TextView
                             android:id="@+id/count_view"

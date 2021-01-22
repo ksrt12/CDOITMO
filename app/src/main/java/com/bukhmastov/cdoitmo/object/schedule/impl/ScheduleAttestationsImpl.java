@@ -57,7 +57,7 @@ public class ScheduleAttestationsImpl extends ScheduleImpl<SAttestations> implem
                     case SOURCE.DE_IFMO: {
                         int term = getTerm();
                         String url = String.format("index.php?node=schedule&index=sched&semiId=%s&group=%s",
-                                String.valueOf(term), StringUtils.prettifyGroupNumber(group));
+                                term, StringUtils.prettifyGroupNumber(group));
                         deIfmoClient.get(context, url, null, new RestStringResponseHandlerJoiner(handler) {
                             @Override
                             public void onSuccess(int code, Client.Headers headers, String response) throws Exception {

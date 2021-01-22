@@ -2,6 +2,9 @@ package com.bukhmastov.cdoitmo.network.impl;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.network.DeIfmoClient;
@@ -18,8 +21,6 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import dagger.Lazy;
 
 public class DeIfmoClientImpl extends DeIfmoClient {

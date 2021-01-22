@@ -1,17 +1,18 @@
 package com.bukhmastov.cdoitmo.view.dialog;
 
 import android.content.Context;
-import androidx.annotation.LayoutRes;
-import dagger.Lazy;
-
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import androidx.annotation.LayoutRes;
 
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.util.Log;
 
 import javax.inject.Inject;
+
+import dagger.Lazy;
 
 public abstract class Dialog {
 

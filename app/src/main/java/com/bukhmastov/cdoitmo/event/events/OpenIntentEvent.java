@@ -1,6 +1,7 @@
 package com.bukhmastov.cdoitmo.event.events;
 
 import android.content.Intent;
+
 import androidx.annotation.NonNull;
 
 public class OpenIntentEvent {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/person"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -17,8 +18,8 @@
         android:layout_height="@dimen/university_person_card_small_avatar"
         android:layout_gravity="center_vertical"
         android:src="@drawable/ic_sentiment_very_satisfied"
-        android:tint="?attr/colorImageMultiply"
-        android:tintMode="multiply" />
+        android:tintMode="multiply"
+        app:tint="?attr/colorImageMultiply" />
 
     <LinearLayout
         android:orientation="vertical"

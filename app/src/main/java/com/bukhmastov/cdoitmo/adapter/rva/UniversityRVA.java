@@ -1,12 +1,12 @@
 package com.bukhmastov.cdoitmo.adapter.rva;
 
 import android.content.Context;
-import androidx.annotation.IdRes;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.IdRes;
+
 import com.bukhmastov.cdoitmo.R;
-import com.bukhmastov.cdoitmo.adapter.rva.RVA;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.model.rva.RVASingleValue;
 import com.bukhmastov.cdoitmo.model.rva.RVAUniversity;

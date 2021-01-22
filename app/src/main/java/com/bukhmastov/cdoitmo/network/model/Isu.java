@@ -2,6 +2,9 @@ package com.bukhmastov.cdoitmo.network.model;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.model.JsonEntity;
 import com.bukhmastov.cdoitmo.network.handlers.ResponseHandler;
 import com.bukhmastov.cdoitmo.network.handlers.RestResponseHandler;
@@ -11,9 +14,6 @@ import com.bukhmastov.cdoitmo.util.singleton.PropertiesUtils;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public abstract class Isu extends Client {
 

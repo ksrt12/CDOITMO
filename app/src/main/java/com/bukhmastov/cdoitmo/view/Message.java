@@ -1,11 +1,12 @@
 package com.bukhmastov.cdoitmo.view;
 
 import android.content.Context;
-import androidx.annotation.LayoutRes;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.LayoutRes;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.util.singleton.StringUtils;

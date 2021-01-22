@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/preference_header"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -19,9 +20,9 @@
         android:layout_gravity="center_vertical"
         android:src="@drawable/ic_settings"
         android:contentDescription="@string/general"
-        android:tint="?android:attr/textColorPrimary"
         android:paddingStart="0dp"
-        android:paddingEnd="@dimen/item_padding_half" />
+        android:paddingEnd="@dimen/item_padding_half"
+        app:tint="?android:attr/textColorPrimary" />
 
     <TextView
         android:id="@+id/preference_header_title"

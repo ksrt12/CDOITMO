@@ -6,19 +6,21 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
 import com.bukhmastov.cdoitmo.provider.InjectProvider;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-
 public class PreferenceEditText extends Preference {
 
-    private @StringRes int message;
-    private @StringRes int hint;
-    private boolean changeSummary;
-    private Callback callback;
+    private @StringRes
+    final int message;
+    private @StringRes
+    final int hint;
+    private final boolean changeSummary;
+    private final Callback callback;
 
     public interface Callback {
         String onSetText(Context context, InjectProvider injectProvider, String value);

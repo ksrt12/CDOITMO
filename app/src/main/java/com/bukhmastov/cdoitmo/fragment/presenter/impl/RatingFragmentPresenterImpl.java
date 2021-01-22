@@ -1,15 +1,16 @@
 package com.bukhmastov.cdoitmo.fragment.presenter.impl;
 
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.ArrayMap;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
@@ -233,11 +234,7 @@ public class RatingFragmentPresenterImpl implements RatingFragmentPresenter, Swi
             } else {
                 timestamp = ((RatingPickerOwn) cached).getTimestamp();
             }
-            if (timestamp + refresh_rate * 3600000L < time.getTimeInMillis()) {
-                load(type, true, cached);
-            } else {
-                load(type, false, cached);
-            }
+            load(type, timestamp + refresh_rate * 3600000L < time.getTimeInMillis(), cached);
         }, throwable -> {
             loadFailed();
         });
@@ -266,7 +263,7 @@ public class RatingFragmentPresenterImpl implements RatingFragmentPresenter, Swi
                     JsonEntity cache = cached == null ? getFromCache(type) : cached;
                     if (cache != null) {
                         log.v(TAG, "load | type=", type, " | from cache");
-                        data.put(type, new Info<>(LOADED, COMMON.equals(type) ? (RatingPickerAll) cache : (RatingPickerOwn) cache));
+                        data.put(type, new Info<>(LOADED, COMMON.equals(type) ? cache : cache));
                         loaded(type);
                         return;
                     }
@@ -493,7 +490,7 @@ public class RatingFragmentPresenterImpl implements RatingFragmentPresenter, Swi
             for (RCourse course : courses) {
                 sb.append(course.getFaculty());
                 sb.append(" ");
-                sb.append(String.valueOf(course.getCourse()));
+                sb.append(course.getCourse());
                 sb.append(" ");
                 sb.append(activity.getString(R.string.course));
                 sb.append(" — ");

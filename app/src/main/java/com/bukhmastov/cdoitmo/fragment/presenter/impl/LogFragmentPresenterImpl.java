@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.event.bus.EventBus;
 import com.bukhmastov.cdoitmo.event.events.OpenIntentEvent;
@@ -30,8 +33,6 @@ import java.nio.charset.StandardCharsets;
 
 import javax.inject.Inject;
 
-import androidx.annotation.Nullable;
-import androidx.core.content.FileProvider;
 import dagger.Lazy;
 
 public class LogFragmentPresenterImpl extends ConnectedFragmentPresenterImpl

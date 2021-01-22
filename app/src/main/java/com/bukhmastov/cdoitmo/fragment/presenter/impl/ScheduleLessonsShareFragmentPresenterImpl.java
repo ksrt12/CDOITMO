@@ -11,6 +11,9 @@ import android.widget.CheckBox;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.event.bus.EventBus;
 import com.bukhmastov.cdoitmo.event.events.OpenIntentEvent;
@@ -45,16 +48,12 @@ import com.bukhmastov.cdoitmo.util.singleton.FileUtils;
 import com.bukhmastov.cdoitmo.util.singleton.StringUtils;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.Serializable;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Objects;
 
 import javax.inject.Inject;
-
-import androidx.annotation.Nullable;
-import androidx.core.content.FileProvider;
 
 import static com.bukhmastov.cdoitmo.util.Thread.SLS;
 

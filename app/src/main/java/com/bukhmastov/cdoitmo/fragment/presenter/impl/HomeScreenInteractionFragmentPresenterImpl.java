@@ -60,7 +60,7 @@ public class HomeScreenInteractionFragmentPresenterImpl extends ConnectedFragmen
         implements HomeScreenInteractionFragmentPresenter {
 
     private static final String TAG = "ShortcutCreateFragment";
-    private ShortcutReceiver receiver = new ShortcutReceiver();
+    private final ShortcutReceiver receiver = new ShortcutReceiver();
     private AutoCompleteTextView searchTextView = null;
     private TeacherPickerAdapter teacherPickerAdapter = null;
     private AlertDialog alertDialog = null;

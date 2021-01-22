@@ -2,6 +2,7 @@ package com.bukhmastov.cdoitmo.util.impl;
 
 import android.content.Context;
 import android.os.Build;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
@@ -59,7 +60,7 @@ public class LogImpl implements Log {
     private static final int WTF = android.util.Log.ASSERT;
     private static final int WTF_EXCEPTION = 8442;
 
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss.SSS", Locale.getDefault());
+    private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss.SSS", Locale.getDefault());
     private ArrayList<LogItem> logList = null;
     private boolean enabled = false;
 

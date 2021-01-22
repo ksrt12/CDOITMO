@@ -17,6 +17,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RemoteViews;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.IntDef;
+import androidx.annotation.LayoutRes;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.MainActivity;
@@ -53,10 +57,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.inject.Inject;
-
-import androidx.annotation.DrawableRes;
-import androidx.annotation.IntDef;
-import androidx.annotation.LayoutRes;
 
 import static com.bukhmastov.cdoitmo.util.Thread.WSL;
 
@@ -306,8 +306,8 @@ public class ScheduleLessonsWidget extends AppWidgetProvider {
                         ""));
                 layout.setTextViewText(R.id.widget_day_title,
                         (
-                                (shift[0] != 0 ? ((shift[0] > 0 ? "+" : "") + String.valueOf(shift[0]) + " ") : "") +
-                                (shift[1] != 0 ? ("(" + (shift[1] > 0 ? "+" : "") + String.valueOf(shift[1] + ") ")) : "")
+                                (shift[0] != 0 ? ((shift[0] > 0 ? "+" : "") + shift[0] + " ") : "") +
+                                (shift[1] != 0 ? ("(" + (shift[1] > 0 ? "+" : "") + shift[1] + ") ") : "")
                         ) +
                         time.getDay(context, calendar.get(Calendar.DAY_OF_WEEK)) +
                         (week == 0 ? " (" + context.getString(R.string.tab_even) + ")" : (week == 1 ? " (" + context.getString(R.string.tab_odd) + ")" : ""))

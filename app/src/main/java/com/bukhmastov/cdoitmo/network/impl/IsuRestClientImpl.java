@@ -2,6 +2,9 @@ package com.bukhmastov.cdoitmo.network.impl;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.model.JsonEntity;
 import com.bukhmastov.cdoitmo.network.IsuRestClient;
@@ -14,9 +17,6 @@ import com.bukhmastov.cdoitmo.util.Thread;
 import java.util.Map;
 
 import javax.inject.Inject;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class IsuRestClientImpl extends IsuRestClient {
 

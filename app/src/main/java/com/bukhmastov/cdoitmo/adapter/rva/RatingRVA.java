@@ -8,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
@@ -28,9 +31,6 @@ import java.util.Calendar;
 import java.util.List;
 
 import javax.inject.Inject;
-
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
 
 public class RatingRVA extends RVA<RVARating> {
 
@@ -131,7 +131,7 @@ public class RatingRVA extends RVA<RVARating> {
                                 continue;
                             }
                             RVARating rvaRating = new RVARating();
-                            rvaRating.setTitle(course.getFaculty() + " — " + String.valueOf(course.getCourse()) + " " + context.getString(R.string.course));
+                            rvaRating.setTitle(course.getFaculty() + " — " + course.getCourse() + " " + context.getString(R.string.course));
                             rvaRating.setPosition(course.getPosition());
                             for (RFaculty faculty : faculties) {
                                 if (StringUtils.isNotBlank(faculty.getName()) && faculty.getName().contains(course.getFaculty())) {

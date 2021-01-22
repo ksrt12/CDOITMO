@@ -1,5 +1,7 @@
 package com.bukhmastov.cdoitmo.model.converter;
 
+import androidx.annotation.NonNull;
+
 import com.bukhmastov.cdoitmo.firebase.FirebasePerformanceProvider;
 import com.bukhmastov.cdoitmo.model.schedule.exams.SExam;
 import com.bukhmastov.cdoitmo.model.schedule.exams.SExams;
@@ -15,8 +17,6 @@ import com.bukhmastov.cdoitmo.util.singleton.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Objects;
-
-import androidx.annotation.NonNull;
 
 public class ScheduleExamsIsuConverter extends Converter<ISUScheduleApiResponse, SExams> {
 

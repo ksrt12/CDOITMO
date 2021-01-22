@@ -1,5 +1,7 @@
 package com.bukhmastov.cdoitmo.fragment.settings;
 
+import androidx.fragment.app.Fragment;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.object.preference.Preference;
 import com.bukhmastov.cdoitmo.object.preference.PreferenceList;
@@ -7,8 +9,6 @@ import com.bukhmastov.cdoitmo.object.preference.PreferenceSwitch;
 
 import java.util.LinkedList;
 import java.util.List;
-
-import androidx.fragment.app.Fragment;
 
 public class SettingsProtocolFragment extends SettingsTemplatePreferencesFragment {
 

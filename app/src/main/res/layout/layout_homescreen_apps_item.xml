@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -20,8 +21,8 @@
             android:layout_height="@dimen/about_icon_width"
             android:layout_gravity="center_vertical"
             android:src="@mipmap/ic_shortcut_time_remaining_widget"
-            android:tint="?attr/colorImageMultiply"
-            android:tintMode="multiply"/>
+            android:tintMode="multiply"
+            app:tint="?attr/colorImageMultiply" />
 
         <LinearLayout
             android:orientation="vertical"

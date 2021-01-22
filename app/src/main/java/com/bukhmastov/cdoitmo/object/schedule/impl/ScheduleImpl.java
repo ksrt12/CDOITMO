@@ -1,5 +1,8 @@
 package com.bukhmastov.cdoitmo.object.schedule.impl;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.StringDef;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.firebase.FirebasePerformanceProvider;
@@ -27,9 +30,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.StringDef;
 
 public abstract class ScheduleImpl<T extends ScheduleJsonEntity> extends ScheduleBase implements Schedule<T> {
 

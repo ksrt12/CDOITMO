@@ -2,14 +2,17 @@ package com.bukhmastov.cdoitmo.network.impl;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.model.JsonEntity;
 import com.bukhmastov.cdoitmo.network.IsuPrivateRestClient;
 import com.bukhmastov.cdoitmo.network.handlers.ResponseHandler;
 import com.bukhmastov.cdoitmo.network.handlers.RestResponseHandler;
 import com.bukhmastov.cdoitmo.network.handlers.joiner.ResponseHandlerJoiner;
-import com.bukhmastov.cdoitmo.network.handlers.joiner.RestStringResponseHandlerJoiner;
 import com.bukhmastov.cdoitmo.network.handlers.joiner.RestResponseHandlerJoiner;
+import com.bukhmastov.cdoitmo.network.handlers.joiner.RestStringResponseHandlerJoiner;
 import com.bukhmastov.cdoitmo.network.model.Client;
 import com.bukhmastov.cdoitmo.util.Log;
 import com.bukhmastov.cdoitmo.util.Storage;
@@ -23,9 +26,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class IsuPrivateRestClientImpl extends IsuPrivateRestClient {
 

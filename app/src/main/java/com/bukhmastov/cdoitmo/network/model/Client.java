@@ -4,6 +4,10 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringDef;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.exception.CorruptedException;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
@@ -35,9 +39,6 @@ import java.util.regex.Pattern;
 
 import javax.inject.Inject;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringDef;
 import okhttp3.Call;
 import okhttp3.FormBody;
 import okhttp3.HttpUrl;
@@ -531,7 +532,7 @@ public abstract class Client {
     }
 
     public class Request {
-        private Call call;
+        private final Call call;
         public Request(Call call) {
             this.call = call;
         }
@@ -547,7 +548,7 @@ public abstract class Client {
     }
 
     public class Headers {
-        private okhttp3.Headers headers;
+        private final okhttp3.Headers headers;
         public Headers(okhttp3.Headers headers) {
             if (headers == null) {
                 this.headers = okhttp3.Headers.of();

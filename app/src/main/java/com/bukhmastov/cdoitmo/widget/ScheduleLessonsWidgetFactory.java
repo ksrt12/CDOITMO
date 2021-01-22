@@ -32,7 +32,7 @@ public class ScheduleLessonsWidgetFactory implements RemoteViewsService.RemoteVi
     private ScheduleLessonsWidget.Colors colors;
     private String type = "group";
     private int parity = -1;
-    private List<SLesson> lessons;
+    private final List<SLesson> lessons;
 
     @Inject
     Lazy<Log> log;

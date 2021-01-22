@@ -1,5 +1,7 @@
 package com.bukhmastov.cdoitmo.fragment.presenter.impl;
 
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.fragment.presenter.ConnectedFragmentPresenter;
 import com.bukhmastov.cdoitmo.model.JsonEntity;
 import com.bukhmastov.cdoitmo.util.Storage;
@@ -7,8 +9,6 @@ import com.bukhmastov.cdoitmo.util.Thread;
 import com.bukhmastov.cdoitmo.util.singleton.StringUtils;
 
 import org.json.JSONException;
-
-import androidx.annotation.Nullable;
 
 public abstract class ConnectedFragmentWithDataPresenterImpl<T extends JsonEntity>
         extends ConnectedFragmentPresenterImpl implements ConnectedFragmentPresenter {

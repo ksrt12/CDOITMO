@@ -2,9 +2,9 @@ package com.bukhmastov.cdoitmo.util;
 
 import android.content.Context;
 
-import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
-
 import androidx.annotation.NonNull;
+
+import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
 
 import java.util.regex.Pattern;
 

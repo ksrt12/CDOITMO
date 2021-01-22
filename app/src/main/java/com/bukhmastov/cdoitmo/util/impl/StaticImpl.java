@@ -30,7 +30,7 @@ import dagger.Lazy;
 public class StaticImpl implements Static {
 
     private static final String TAG = "Static";
-    private Map<String, Integer> screenOrientationMap = new HashMap<>();
+    private final Map<String, Integer> screenOrientationMap = new HashMap<>();
 
     @Inject
     Log log;

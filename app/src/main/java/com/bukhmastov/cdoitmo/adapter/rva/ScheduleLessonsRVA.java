@@ -1,7 +1,6 @@
 package com.bukhmastov.cdoitmo.adapter.rva;
 
 import android.content.Context;
-import androidx.annotation.LayoutRes;
 import android.util.SparseIntArray;
 import android.view.InflateException;
 import android.view.LayoutInflater;
@@ -10,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import androidx.annotation.LayoutRes;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
@@ -194,7 +195,7 @@ public class ScheduleLessonsRVA extends RVA<RVALessons> {
             String title = StringUtils.isNotBlank(item.data.getFirst()) ? item.data.getFirst() : Static.GLITCH;
             boolean help = "true".equals(item.data.getSecond());
             ((TextView) container.findViewById(R.id.day_title)).setText(title);
-            ((ImageButton) container.findViewById(R.id.day_info)).setVisibility(help ? View.VISIBLE : View.GONE);
+            container.findViewById(R.id.day_info).setVisibility(help ? View.VISIBLE : View.GONE);
             if (help) {
                 tryRegisterClickListener(container, R.id.day_info, new RVALessons());
             }
@@ -282,7 +283,7 @@ public class ScheduleLessonsRVA extends RVA<RVALessons> {
             String dataSource = StringUtils.isNotBlank(item.data.getSecond()) ? item.data.getSecond() : "";
             ((TextView) container.findViewById(R.id.update_time)).setText(updateTime);
             ((TextView) container.findViewById(R.id.data_source)).setText(dataSource);
-            ((TextView) container.findViewById(R.id.data_source)).setVisibility(StringUtils.isEmpty(dataSource) ? View.GONE : View.VISIBLE);
+            container.findViewById(R.id.data_source).setVisibility(StringUtils.isEmpty(dataSource) ? View.GONE : View.VISIBLE);
         } catch (Exception e) {
             log.get().exception(e);
         }

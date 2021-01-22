@@ -1,5 +1,7 @@
 package com.bukhmastov.cdoitmo.model.converter;
 
+import androidx.annotation.NonNull;
+
 import com.bukhmastov.cdoitmo.firebase.FirebasePerformanceProvider;
 import com.bukhmastov.cdoitmo.model.schedule.lessons.SDay;
 import com.bukhmastov.cdoitmo.model.schedule.lessons.SLesson;
@@ -20,8 +22,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 import java.util.regex.Pattern;
-
-import androidx.annotation.NonNull;
 
 public class ScheduleLessonsIsuConverter extends Converter<ISUScheduleApiResponse, SLessons> {
 

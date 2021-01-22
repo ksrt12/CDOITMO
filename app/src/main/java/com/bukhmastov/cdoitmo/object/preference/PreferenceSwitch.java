@@ -1,11 +1,12 @@
 package com.bukhmastov.cdoitmo.object.preference;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
@@ -27,7 +28,7 @@ public class PreferenceSwitch extends Preference {
         void onApproveChange(ConnectedActivity activity, PreferenceSwitch preference, boolean value, ApproveChangeCallback callback);
     }
 
-    private Callback callback;
+    private final Callback callback;
     private List<String> dependencies = new LinkedList<>();
     public boolean enabled = false;
 

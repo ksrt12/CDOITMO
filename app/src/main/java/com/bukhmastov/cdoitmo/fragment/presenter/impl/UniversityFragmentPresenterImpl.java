@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.adapter.pager.PagerUniversityAdapter;
 import com.bukhmastov.cdoitmo.event.bus.EventBus;
@@ -19,10 +23,6 @@ import com.bukhmastov.cdoitmo.util.Thread;
 import com.google.android.material.tabs.TabLayout;
 
 import javax.inject.Inject;
-
-import androidx.annotation.Nullable;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager.widget.ViewPager;
 
 import static com.bukhmastov.cdoitmo.util.Thread.UH;
 

@@ -12,6 +12,8 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.IdRes;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.adapter.array.TeacherPickerAdapter;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
@@ -44,8 +46,6 @@ import java.util.regex.Pattern;
 
 import javax.inject.Inject;
 
-import androidx.annotation.IdRes;
-
 import static com.bukhmastov.cdoitmo.util.Thread.SLM;
 
 public class ScheduleLessonsModifyFragmentPresenterImpl extends ConnectedFragmentPresenterImpl
@@ -60,7 +60,7 @@ public class ScheduleLessonsModifyFragmentPresenterImpl extends ConnectedFragmen
     private boolean blockTimeStart = false;
     private boolean blockTimeEnd = false;
     private boolean blockNextTeacherSearch = false;
-    private DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Time.DEFAULT_LOCALE);
+    private final DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy", Time.DEFAULT_LOCALE);
 
     @Inject
     Log log;

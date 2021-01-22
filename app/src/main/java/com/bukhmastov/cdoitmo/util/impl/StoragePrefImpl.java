@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.preference.PreferenceManager;
+
 import androidx.annotation.NonNull;
 
 import com.bukhmastov.cdoitmo.App;
@@ -39,7 +40,7 @@ import dagger.Lazy;
 public class StoragePrefImpl implements StoragePref {
 
     private static final String TAG = "StoragePref";
-    private Collection<Preference> preferences = new ArrayList<>();
+    private final Collection<Preference> preferences = new ArrayList<>();
 
     @Inject
     Lazy<Log> log;

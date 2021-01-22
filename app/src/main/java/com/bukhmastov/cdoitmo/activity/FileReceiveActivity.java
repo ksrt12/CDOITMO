@@ -2,8 +2,9 @@ package com.bukhmastov.cdoitmo.activity;
 
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
 import android.view.MenuItem;
+
+import androidx.annotation.Nullable;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.presenter.FileReceiveActivityPresenter;

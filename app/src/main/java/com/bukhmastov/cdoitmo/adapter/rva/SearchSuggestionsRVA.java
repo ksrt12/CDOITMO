@@ -5,15 +5,15 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.model.entity.Suggestion;
 import com.bukhmastov.cdoitmo.util.singleton.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
 
 public class SearchSuggestionsRVA extends RVA<Suggestion> {
 

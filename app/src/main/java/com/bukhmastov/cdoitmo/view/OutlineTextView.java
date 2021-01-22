@@ -9,13 +9,13 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
 import com.bukhmastov.cdoitmo.util.Log;
 
 import javax.inject.Inject;
-
-import androidx.annotation.Nullable;
 
 @SuppressLint("AppCompatCustomView")
 public class OutlineTextView extends TextView {

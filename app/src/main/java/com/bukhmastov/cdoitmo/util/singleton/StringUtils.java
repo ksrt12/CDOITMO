@@ -5,6 +5,9 @@ import android.content.Context;
 import android.os.Build;
 import android.text.Html;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.bukhmastov.cdoitmo.util.StoragePref;
 
 import java.nio.charset.StandardCharsets;
@@ -14,9 +17,6 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 
 public class StringUtils {
 

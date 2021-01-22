@@ -65,7 +65,6 @@ import com.bukhmastov.cdoitmo.util.singleton.StringUtils;
 import com.bukhmastov.cdoitmo.widget.ScheduleLessonsWidget;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
@@ -93,7 +92,7 @@ public class ScheduleLessonsTabFragmentPresenterImpl implements Schedule.Handler
      * 2 - Обе недели
      */
     private int type = ScheduleLessonsTabHostFragmentPresenter.DEFAULT_INVALID_TYPE;
-    private List<String> selfGroups = new ArrayList<>();
+    private final List<String> selfGroups = new ArrayList<>();
 
     @Inject
     Log log;

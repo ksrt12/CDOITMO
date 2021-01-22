@@ -5,6 +5,10 @@ import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
 import com.bukhmastov.cdoitmo.factory.AppComponentProvider;
@@ -25,9 +29,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import androidx.annotation.LayoutRes;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
 import dagger.Lazy;
 
 public abstract class Preference {

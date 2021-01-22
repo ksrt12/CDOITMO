@@ -3,6 +3,8 @@ package com.bukhmastov.cdoitmo.fragment.settings;
 import android.app.AlertDialog;
 import android.content.Context;
 
+import androidx.fragment.app.Fragment;
+
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
 import com.bukhmastov.cdoitmo.model.entity.SettingsQuery;
@@ -15,8 +17,6 @@ import com.bukhmastov.cdoitmo.util.Storage;
 
 import java.util.LinkedList;
 import java.util.List;
-
-import androidx.fragment.app.Fragment;
 
 public class SettingsScheduleLessonsFragment extends SettingsTemplatePreferencesFragment {
 

@@ -18,6 +18,14 @@ import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.event.bus.EventBus;
@@ -60,14 +68,6 @@ import java.util.List;
 import java.util.Objects;
 
 import javax.inject.Inject;
-
-import androidx.annotation.DrawableRes;
-import androidx.annotation.LayoutRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 
 import static com.bukhmastov.cdoitmo.util.Thread.UB;
 
@@ -221,11 +221,7 @@ public class UniversityBuildingsFragmentPresenterImpl implements UniversityBuild
                 return;
             }
             uBuildings = cache;
-            if (cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis()) {
-                load(true);
-            } else {
-                load(false);
-            }
+            load(cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis());
         }, throwable -> {
             indicatorLoadFailed();
         });

@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.bukhmastov.cdoitmo.App;
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
@@ -43,10 +47,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
-
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import static com.bukhmastov.cdoitmo.util.Thread.IG;
 
@@ -151,11 +151,7 @@ public class IsuGroupInfoFragmentPresenterImpl extends ConnectedFragmentWithData
                 return;
             }
             setData(cache);
-            if (cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis()) {
-                load(true, cache);
-            } else {
-                load(false, cache);
-            }
+            load(cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis(), cache);
         });
     }
 

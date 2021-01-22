@@ -1,11 +1,12 @@
 package com.bukhmastov.cdoitmo.view;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bukhmastov.cdoitmo.R;
 
@@ -16,7 +17,7 @@ public class RecyclerViewOnScrollListener extends RecyclerView.OnScrollListener 
     private int scrolled = 0;
     private int scrolledDistance = 0;
     private boolean controlsVisible = true;
-    private View container;
+    private final View container;
 
     public RecyclerViewOnScrollListener(View container) {
         this.container = container;

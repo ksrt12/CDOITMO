@@ -3,6 +3,7 @@ package com.bukhmastov.cdoitmo.activity.presenter.impl;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -19,7 +20,7 @@ public class ShortcutReceiverActivityPresenterImpl implements ShortcutReceiverAc
 
     private static final String TAG = "ShortcutReceiverActivity";
     private ShortcutReceiverActivity activity = null;
-    private ShortcutReceiver receiver = new ShortcutReceiver();
+    private final ShortcutReceiver receiver = new ShortcutReceiver();
 
     @Inject
     Log log;

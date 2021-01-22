@@ -202,11 +202,7 @@ public class ProtocolFragmentPresenterImpl extends ConnectedFragmentWithDataPres
                 return;
             }
             setData(cache);
-            if (cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis()) {
-                load(true, cache);
-            } else {
-                load(false, cache);
-            }
+            load(cache.getTimestamp() + refresh_rate * 3600000L < time.getTimeInMillis(), cache);
         });
     }
 
@@ -260,7 +256,7 @@ public class ProtocolFragmentPresenterImpl extends ConnectedFragmentWithDataPres
                 }
                 return;
             }
-            String url = "eregisterlog?days=" + String.valueOf(numberOfWeeks * 7);
+            String url = "eregisterlog?days=" + numberOfWeeks * 7;
             deIfmoRestClient.get(activity, url, null, new RestResponseHandler<Protocol>() {
                 @Override
                 public void onSuccess(int code, Client.Headers headers, Protocol response) throws Exception {

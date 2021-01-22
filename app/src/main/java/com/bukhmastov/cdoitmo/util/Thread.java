@@ -1,14 +1,14 @@
 package com.bukhmastov.cdoitmo.util;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringDef;
+
 import com.bukhmastov.cdoitmo.function.ThrowingConsumer;
 import com.bukhmastov.cdoitmo.function.ThrowingRunnable;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.StringDef;
 
 /**
  * App has multiple threads, but performs tasks consistently task by task.
@@ -68,7 +68,7 @@ public interface Thread {
      * Will crash the application
      * Only for debugging purposes
      * Will not take affect if debug mode turned off
-     * @see com.bukhmastov.cdoitmo.App.DEBUG
+     * @see com.bukhmastov.cdoitmo.App
      */
     void uncaught(Throwable throwable);
 

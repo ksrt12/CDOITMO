@@ -1,11 +1,11 @@
 package com.bukhmastov.cdoitmo.object.preference;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.StringRes;
-
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 import com.bukhmastov.cdoitmo.R;
 import com.bukhmastov.cdoitmo.activity.ConnectedActivity;
